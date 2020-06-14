@@ -1,0 +1,30 @@
+extends ../layout
+
+block content
+    h2.mt-5 Crea un nuevo Empleado
+    form(action="/clientes/create", method="POST")
+        .form-group
+            label Nombre
+            input.form-control(type="text", name="nombre")
+        .form-group
+            label Dni
+            input.form-control(type="number", name="dni")
+        .form-group
+            label Sexo
+            select.form-control(name="sexo")
+                option(value="") Selecciona tu sexo
+                option(value="M") Masculino
+                option(value="F") Femenino
+        .form-group
+            label Fecha_nacimiento
+            input.form-control(type="date", name="fecha_nacimiento")
+        .form-group
+            label Salario
+            input.form-control(type="number", name="salario")
+        .form-group
+            label Cargo
+            input.form-control(type="text", name="cargo")
+        .form-group
+            label Jefe id
+            input.form-control(type="number", name="jefe_id")
+        input.btn.btn-info.btn-block.mb-5(type="submit", value="Enviar")

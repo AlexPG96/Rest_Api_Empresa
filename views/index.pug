@@ -1,0 +1,27 @@
+extends layout
+
+block content
+  h2.mt-5 Lista de Empleados
+  table.table
+    thead
+      tr
+        th nombre
+        th dni
+        th sexo
+        th fecha_nacimiento
+        th fecha_inc
+        th salario
+        th cargo
+        th jefe_id
+    tbody
+      each empleado in empleados
+        tr
+          td= empleado.nombre
+          td= empleado.dni
+          td= empleado.sexo
+          td= empleado.fecha_nacimiento
+          td= empleado.fecha_inc
+          td= empleado.salario
+          td= empleado.cargo
+          td= empleado.jefe_id
+          

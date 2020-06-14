@@ -1,0 +1,1 @@
+exports.selectAll = 'select * from empresa';
