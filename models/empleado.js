@@ -66,4 +66,5 @@ module.exports = {
     create,
     deleteEmpleado,
     editEmpleado,
+    getById
 }

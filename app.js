@@ -7,6 +7,8 @@ const cors = require('cors');
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
+const empleadosRouter = require('./routes/empleados');
+const departamentoRouter = require('./routes/departamentos');
 const apiRouter = require('./routes/api');
 
 //cargo las variables de entorno
@@ -36,6 +38,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/empleados', empleadosRouter);
+app.use('/departamentos', departamentoRouter);
+app.use('/api', apiRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
